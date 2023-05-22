@@ -1,0 +1,17 @@
+
+.headercontainer{
+    width: 100%;
+    background-color: royalblue;
+    padding: 6px;
+}
+.headertext{
+    color: white;
+}
+.form{
+    margin: 0 auto;
+    margin-top: 35%;
+    margin-bottom: 35%;
+}
+.login{
+    color: royalblue;
+}
