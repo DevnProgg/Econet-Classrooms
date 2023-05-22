@@ -4,6 +4,7 @@ import {signInWithGoogle} from './firebaseConfig'
 import './styles/login.css'
 import './styles/relative.css'
 
+
 function Login(){
     let header = <Stack spacing={6}>
                 <Stack className='headercontainer' spacing={3}>

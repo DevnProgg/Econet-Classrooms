@@ -3,6 +3,7 @@ import {
     GoogleAuthProvider,
     signInWithPopup
 } from 'firebase/auth'
+import Cookies from 'universal-cookie'
 
 import { initializeApp } from "firebase/app"
 const firebaseConfig = {
@@ -27,9 +28,11 @@ const firebaseConfig = {
 
   const provider = new GoogleAuthProvider()
 
+  const cookies = new Cookies()
   export const signInWithGoogle = () =>{
         signInWithPopup(auth, provider).then((result)=>{
                 console.log(result)
+                cookies.set('auth-token', result.user.refreshToken)
         }).catch((error) =>{
             console.log(error)
         })
